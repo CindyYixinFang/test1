@@ -1,6 +1,5 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="test.css">
         <title>api and react test</title>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -10,7 +9,7 @@
                 $("#labelShow").html(value);
             }
             function showWeather(){
-                var value = $("#cityInput").val();
+                var city = $("#cityInput").val();
                 var url='https://openweathermap.org/data/2.5/weather?q=';
                 var appid='&appid=b6907d289e10d714a6e88b30761fae22';
                 $.getJSON(url+value+appid,function(data){
@@ -25,7 +24,7 @@
         </script>
     </head>
     <body>
-        What the dick?!?!? <br />
+        Enter in some data you want to echo<br />
         <input type="text" id="txtInput" /> <br />
         <input type="button" value="submit your data" onclick="displayData();"/> <br />
         
@@ -36,7 +35,7 @@
         <br />
         <br />
         Enter in a city: <input type="text" id="cityInput" /> <br />
-        <input type="button" value="submit your data" onclick="showWeather();"/> <br />
+        <input type="button" value="Get the weather" onclick="showWeather();"/> <br />
         
         The weather is: <br />
         <label id="temp"> </label> <br />

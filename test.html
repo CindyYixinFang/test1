@@ -9,6 +9,14 @@
                 var value = $("#txtInput").val();
                 $("#labelShow").html(value);
             }
+            function showWeather(){
+                var value = $("#cityInput").val();
+                $.getJSON('https://openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22',function(data){
+                    console.log(data);
+                    console.log(data.main.humidity);
+                    $("#showWeather").html(data.main.temp);
+                });
+            }
         </script>
     </head>
     <body>
@@ -18,5 +26,14 @@
         
         You entered in: <br />
         <label id="labelShow"> </label> <br />
+
+        <br />
+        <br />
+        <br />
+        Enter in a city: <input type="text" id="cityInput" /> <br />
+        <input type="button" value="submit your data" onclick="showWeather();"/> <br />
+        
+        You entered in: <br />
+        <label id="showWeather"> </label> <br />
     </body> 
 </html>

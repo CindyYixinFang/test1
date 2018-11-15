@@ -1,5 +1,57 @@
 h1 {
-    color:coral;
-    font-size:100px;
-    font-style:oblique;
+    color: cyan;
+    font-size: 100px;
+    font-style: oblique;
+    text-align: center;
+}
+body {
+    background-color: darkcyan;
+}
+h2 {
+    color: cyan;
+    font-size: 40px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.desc {
+    background-color:aquamarine;
+    color: black;
+    text-align: center;
+    width: 50%;
+    height: auto;
+    padding: 5px;
+    margin: auto;
+    
+}
+table, th, td {
+    border: 1px solid black;
+    margin:auto;
+    height: 30px;
+    width: 50px;
+    
+}
+.button {
+    background-color:crimson; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: .4s;
+}
+.button1 {
+    background-color:#00f682;
+    color: #000000;
+    border: 2px solid crimson;
+    
+    
+}
+.button:hover {
+    background-color: crimson;
+    color: white;
 }

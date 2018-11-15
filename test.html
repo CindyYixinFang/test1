@@ -11,10 +11,15 @@
             }
             function showWeather(){
                 var value = $("#cityInput").val();
-                $.getJSON('https://openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22',function(data){
+                var url='https://openweathermap.org/data/2.5/weather?q=';
+                var appid='&appid=b6907d289e10d714a6e88b30761fae22';
+                $.getJSON(url+value+appid,function(data){
                     console.log(data);
-                    console.log(data.main.humidity);
-                    $("#showWeather").html(data.main.temp);
+                    $("#temp").html("temperature:"+ data.main.temp);
+                    $("#humidity").html("humidity:"+data.main.humidity);
+                    $("#pressure").html("pressure:"+data.main.pressure);
+                    $("#temp_max").html("temp_max:"+data.main.temp_max);
+                    $("#temp_min").html("temp_min:"+data.main.temp_min);
                 });
             }
         </script>
@@ -33,7 +38,12 @@
         Enter in a city: <input type="text" id="cityInput" /> <br />
         <input type="button" value="submit your data" onclick="showWeather();"/> <br />
         
-        You entered in: <br />
-        <label id="showWeather"> </label> <br />
+        The weather is: <br />
+        <label id="temp"> </label> <br />
+        <label id="humidity"> </label> <br />
+        <label id="pressure"> </label> <br />
+        <label id="temp_max"> </label> <br />
+        <label id="temp_min"> </label> <br />
+        
     </body> 
 </html>

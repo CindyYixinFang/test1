@@ -12,7 +12,7 @@
                 var city = $("#cityInput").val();
                 var url='https://openweathermap.org/data/2.5/weather?q=';
                 var appid='&appid=b6907d289e10d714a6e88b30761fae22';
-                $.getJSON(url+value+appid,function(data){
+                $.getJSON(url+city+appid,function(data){
                     console.log(data);
                     $("#temp").html("temperature:"+ data.main.temp);
                     $("#humidity").html("humidity:"+data.main.humidity);
